@@ -47,7 +47,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="py-24 sm:py-32 bg-white dark:bg-[#0B0D11] relative overflow-hidden">
+    <section id="about" className="py-20 sm:py-32 bg-white dark:bg-[#0B0D11] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedReveal>
           <SectionHeading
@@ -59,14 +59,14 @@ export default function AboutSection() {
           />
         </AnimatedReveal>
 
-        {/* Tab Navigation */}
-        <div className="mt-12 flex justify-center">
-          <div className="inline-flex p-1.5 rounded-2xl bg-stone-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700">
+        {/* Tab Navigation (Scrollable & Responsive on mobile) */}
+        <div className="mt-10 sm:mt-12 flex justify-center overflow-x-auto no-scrollbar px-1">
+          <div className="inline-flex p-1 sm:p-1.5 rounded-2xl bg-stone-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 max-w-full">
             {pillars.map((pillar, idx) => (
               <button
                 key={pillar.title}
                 onClick={() => setActiveTab(idx)}
-                className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 relative ${
+                className={`px-3 sm:px-6 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all duration-300 relative whitespace-nowrap shrink-0 ${
                   activeTab === idx
                     ? 'text-white shadow-md'
                     : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
@@ -86,7 +86,7 @@ export default function AboutSection() {
         </div>
 
         {/* Tab Content Display */}
-        <div className="mt-12">
+        <div className="mt-8 sm:mt-12">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -94,28 +94,28 @@ export default function AboutSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.4 }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-stone-50 dark:bg-zinc-900/60 p-6 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800"
+              className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center bg-stone-50 dark:bg-zinc-900/60 p-5 sm:p-10 rounded-3xl border border-zinc-200/80 dark:border-zinc-800"
             >
               {/* Left Info Column */}
-              <div className="lg:col-span-7 space-y-6">
+              <div className="lg:col-span-7 space-y-4 sm:space-y-6">
                 <div>
                   <span className="text-xs font-bold uppercase tracking-wider text-tis-crimson dark:text-red-400">
                     {pillars[activeTab].subtitle}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-zinc-900 dark:text-white mt-1">
+                  <h3 className="text-xl sm:text-3xl font-extrabold font-display text-zinc-900 dark:text-white mt-1">
                     {pillars[activeTab].title}
                   </h3>
                 </div>
 
-                <p className="text-base text-zinc-600 dark:text-zinc-300 leading-relaxed font-sans">
+                <p className="text-sm sm:text-base text-zinc-600 dark:text-zinc-300 leading-relaxed font-sans">
                   {pillars[activeTab].desc}
                 </p>
 
-                <div className="space-y-3 pt-2">
+                <div className="space-y-2.5 pt-1 sm:pt-2">
                   {pillars[activeTab].points.map((pt) => (
-                    <div key={pt} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-tis-teal shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
+                    <div key={pt} className="flex items-start gap-2.5">
+                      <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-tis-teal shrink-0 mt-0.5" />
+                      <span className="text-xs sm:text-sm font-medium text-zinc-700 dark:text-zinc-300">
                         {pt}
                       </span>
                     </div>
@@ -124,15 +124,15 @@ export default function AboutSection() {
               </div>
 
               {/* Right Image Column */}
-              <div className="lg:col-span-5 relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] border-2 border-white dark:border-zinc-700">
+              <div className="lg:col-span-5 relative mt-4 lg:mt-0">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[16/10] sm:aspect-[4/3] border-2 border-white dark:border-zinc-700">
                   <img
                     src={pillars[activeTab].image}
                     alt={pillars[activeTab].title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-semibold">
+                  <div className="absolute bottom-3 left-3 right-3 text-white text-[11px] sm:text-xs font-semibold">
                     Tula's International School Campus • Dehradun Foothills
                   </div>
                 </div>
@@ -142,18 +142,18 @@ export default function AboutSection() {
         </div>
 
         {/* Authentic Student & Mentor Quotes from TIS */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           <AnimatedReveal delay={0.1}>
-            <div className="p-8 rounded-3xl bg-tis-crimson text-white relative overflow-hidden shadow-xl">
-              <Quote className="w-12 h-12 text-white/20 absolute top-6 right-6" />
-              <p className="text-xl font-bold font-serif italic leading-relaxed">
+            <div className="p-6 sm:p-8 rounded-3xl bg-tis-crimson text-white relative overflow-hidden shadow-xl">
+              <Quote className="w-10 h-10 text-white/20 absolute top-5 right-5" />
+              <p className="text-lg sm:text-xl font-bold font-serif italic leading-relaxed pr-6">
                 “We feel supported in what we do and nudged further to do more.”
               </p>
-              <div className="mt-6 pt-4 border-t border-white/20">
-                <p className="font-display font-extrabold text-sm text-tis-gold">
+              <div className="mt-5 pt-4 border-t border-white/20">
+                <p className="font-display font-extrabold text-xs sm:text-sm text-tis-gold">
                   Holistic Development Ethos
                 </p>
-                <p className="text-xs text-red-100">
+                <p className="text-[11px] sm:text-xs text-red-100">
                   Music, Art, Sports, & Experiential Academics at TIS
                 </p>
               </div>
@@ -161,16 +161,16 @@ export default function AboutSection() {
           </AnimatedReveal>
 
           <AnimatedReveal delay={0.2}>
-            <div className="p-8 rounded-3xl bg-tis-teal text-white relative overflow-hidden shadow-xl">
-              <Quote className="w-12 h-12 text-white/20 absolute top-6 right-6" />
-              <p className="text-xl font-bold font-serif italic leading-relaxed">
+            <div className="p-6 sm:p-8 rounded-3xl bg-tis-teal text-white relative overflow-hidden shadow-xl">
+              <Quote className="w-10 h-10 text-white/20 absolute top-5 right-5" />
+              <p className="text-lg sm:text-xl font-bold font-serif italic leading-relaxed pr-6">
                 “Tula's helped me thrive and become the best version of myself.”
               </p>
-              <div className="mt-6 pt-4 border-t border-white/20">
-                <p className="font-display font-extrabold text-sm text-tis-gold">
+              <div className="mt-5 pt-4 border-t border-white/20">
+                <p className="font-display font-extrabold text-xs sm:text-sm text-tis-gold">
                   Pastoral Empowerment
                 </p>
-                <p className="text-xs text-teal-100">
+                <p className="text-[11px] sm:text-xs text-teal-100">
                   Confidence, Empathy & Moral Clarity forged in the Himalayas
                 </p>
               </div>

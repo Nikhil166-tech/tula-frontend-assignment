@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, Sparkles, Building2 } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { schoolInfo } from '../../data/tisData';
 import AnimatedReveal from '../animation/AnimatedReveal';
@@ -54,14 +54,14 @@ export default function AdmissionCTASection() {
   };
 
   return (
-    <section id="admissions" className="py-24 sm:py-32 bg-stone-100/70 dark:bg-[#07090D] relative overflow-hidden">
+    <section id="admissions" className="py-20 sm:py-32 bg-stone-100/70 dark:bg-[#07090D] relative overflow-hidden">
       {/* Decorative gradient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-to-r from-tis-crimson/15 via-tis-teal/15 to-tis-gold/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[800px] h-[350px] sm:h-[600px] bg-gradient-to-r from-tis-crimson/15 via-tis-teal/15 to-tis-gold/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <AnimatedReveal>
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tis-crimson/10 dark:bg-tis-crimson/20 text-tis-crimson dark:text-red-400 text-xs font-bold uppercase tracking-wider mb-4 border border-tis-crimson/20">
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-tis-crimson/10 dark:bg-tis-crimson/20 text-tis-crimson dark:text-red-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4 border border-tis-crimson/20">
               <Sparkles className="w-3.5 h-3.5 text-tis-gold" />
               Limited Residential Seats Available
             </span>
@@ -69,7 +69,7 @@ export default function AdmissionCTASection() {
               Begin Your Journey with{' '}
               <span className="text-tis-crimson dark:text-red-400">Tula's International</span>
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-zinc-600 dark:text-zinc-300 font-sans">
+            <p className="mt-3 sm:mt-4 text-sm sm:text-lg text-zinc-600 dark:text-zinc-300 font-sans px-2">
               Schedule a personalized campus tour in Dehradun or request an official prospectus and fee schedule for Academic Session 2026–2027.
             </p>
           </div>
@@ -79,41 +79,41 @@ export default function AdmissionCTASection() {
         <AnimatedReveal delay={0.1}>
           <div className="rounded-3xl bg-white dark:bg-zinc-900 border border-zinc-200/80 dark:border-zinc-800 shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
             {/* Left Info Column */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-tis-crimson via-tis-crimson-dark to-zinc-950 p-8 sm:p-12 text-white flex flex-col justify-between relative overflow-hidden">
+            <div className="lg:col-span-5 bg-gradient-to-br from-tis-crimson via-tis-crimson-dark to-zinc-950 p-6 sm:p-12 text-white flex flex-col justify-between relative overflow-hidden">
               <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-white/5 rounded-full blur-2xl pointer-events-none" />
 
-              <div className="relative z-10 space-y-6">
+              <div className="relative z-10 space-y-5 sm:space-y-6">
                 <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-tis-gold font-display font-black text-xl">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/10 flex items-center justify-center text-tis-gold font-display font-black text-lg sm:text-xl">
                     TIS
                   </div>
                   <div>
-                    <h3 className="font-display font-extrabold text-xl text-white">
+                    <h3 className="font-display font-extrabold text-lg sm:text-xl text-white">
                       Admissions Office
                     </h3>
-                    <p className="text-xs uppercase tracking-widest text-tis-gold">
+                    <p className="text-[10px] sm:text-xs uppercase tracking-widest text-tis-gold">
                       Dehradun, Uttarakhand
                     </p>
                   </div>
                 </div>
 
-                <p className="text-sm text-red-100 leading-relaxed font-sans">
-                  Our admissions counselors are available Monday through Saturday (9:00 AM – 6:00 PM IST) to guide parents through criteria, entrance assessments, and scholarship opportunities.
+                <p className="text-xs sm:text-sm text-red-100 leading-relaxed font-sans">
+                  Our admissions counselors are available Monday through Saturday (9:00 AM – 6:00 PM IST) to guide parents through criteria, assessments, and scholarship opportunities.
                 </p>
 
-                <div className="space-y-4 pt-4 border-t border-white/15 text-sm">
+                <div className="space-y-3 sm:space-y-4 pt-3 sm:pt-4 border-t border-white/15 text-xs sm:text-sm">
                   <a
                     href={`tel:${schoolInfo.admissionsHelpline}`}
                     className="flex items-center gap-3 text-white hover:text-tis-gold transition-colors font-semibold"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0">
                       <Phone className="w-4 h-4" />
                     </div>
                     <span>Helpline: {schoolInfo.admissionsHelpline}</span>
                   </a>
 
                   <div className="flex items-center gap-3 text-red-100">
-                    <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0">
                       <Phone className="w-4 h-4" />
                     </div>
                     <span>Landline: 0135-2699444 / 2699666</span>
@@ -123,10 +123,10 @@ export default function AdmissionCTASection() {
                     href={`mailto:${schoolInfo.email}`}
                     className="flex items-center gap-3 text-white hover:text-tis-gold transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0">
                       <Mail className="w-4 h-4" />
                     </div>
-                    <span>{schoolInfo.email}</span>
+                    <span className="truncate">{schoolInfo.email}</span>
                   </a>
 
                   <a
@@ -135,58 +135,59 @@ export default function AdmissionCTASection() {
                     rel="noopener noreferrer"
                     className="flex items-start gap-3 text-red-100 hover:text-white transition-colors"
                   >
-                    <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0 mt-0.5">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-white/10 flex items-center justify-center text-tis-gold shrink-0 mt-0.5">
                       <MapPin className="w-4 h-4" />
                     </div>
-                    <span className="text-xs leading-relaxed">
+                    <span className="text-[11px] sm:text-xs leading-relaxed">
                       Dhoolkot, P.O – Selaqui, Chakrata Road, Dehradun - 248011
                     </span>
                   </a>
                 </div>
               </div>
 
-              <div className="relative z-10 pt-8 mt-8 border-t border-white/15 flex items-center gap-2 text-xs text-tis-gold">
-                <ShieldCheck className="w-4 h-4" />
+              <div className="relative z-10 pt-6 mt-6 sm:pt-8 sm:mt-8 border-t border-white/15 flex items-center gap-2 text-xs text-tis-gold">
+                <ShieldCheck className="w-4 h-4 shrink-0" />
                 <span>Managed by {schoolInfo.trust}</span>
               </div>
             </div>
 
             {/* Right Form Column */}
-            <div className="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center">
+            <div className="lg:col-span-7 p-6 sm:p-12 flex flex-col justify-center">
               {submitted ? (
-                <div className="text-center py-10">
-                  <div className="w-16 h-16 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <CheckCircle2 className="w-10 h-10" />
+                <div className="text-center py-8 sm:py-10">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold font-display text-zinc-900 dark:text-white">
+                  <h3 className="text-xl sm:text-2xl font-bold font-display text-zinc-900 dark:text-white">
                     Application Request Received!
                   </h3>
-                  <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400 max-w-md mx-auto leading-relaxed">
+                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 max-w-md mx-auto leading-relaxed">
                     Thank you, <span className="font-bold text-tis-crimson">{formData.name || 'Parent'}</span>. Our Admissions Team will contact you on <span className="font-bold">{formData.phone}</span> within 24 hours.
                   </p>
                   <div className="mt-6">
                     <Button
                       variant="primary"
                       onClick={() => setSubmitted(false)}
+                      className="text-xs sm:text-sm py-2.5 px-5"
                     >
                       Submit Another Query
                     </Button>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-4">
                   <div className="mb-2">
-                    <h3 className="text-2xl font-black font-display text-zinc-900 dark:text-white">
+                    <h3 className="text-xl sm:text-2xl font-black font-display text-zinc-900 dark:text-white">
                       Enquire for 2026–2027 Admissions
                     </h3>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+                    <p className="text-[11px] sm:text-xs text-zinc-500 dark:text-zinc-400 mt-1">
                       Fill out the form below to receive the official prospectus and fee brochure.
                     </p>
                   </div>
 
                   {/* Name */}
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5">
+                    <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1">
                       Student / Parent Full Name *
                     </label>
                     <input
@@ -195,14 +196,14 @@ export default function AdmissionCTASection() {
                       placeholder="e.g. Vikramaditya Singh"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
+                      className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
                     />
                   </div>
 
                   {/* Email & Phone */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5">
+                      <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1">
                         Email Address
                       </label>
                       <input
@@ -210,12 +211,12 @@ export default function AdmissionCTASection() {
                         placeholder="parent@gmail.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
+                        className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5">
+                      <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1">
                         Mobile Number *
                       </label>
                       <input
@@ -225,21 +226,21 @@ export default function AdmissionCTASection() {
                         placeholder="10-digit phone number"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
+                        className="w-full px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
                       />
                     </div>
                   </div>
 
                   {/* OTP Verification Box */}
-                  <div className="p-3.5 rounded-xl bg-tis-aqua-soft/30 dark:bg-zinc-800/60 border border-tis-teal/20 flex flex-col sm:flex-row items-center justify-between gap-3">
-                    <span className="text-xs text-zinc-700 dark:text-zinc-300 font-medium">
+                  <div className="p-3 rounded-xl bg-tis-aqua-soft/30 dark:bg-zinc-800/60 border border-tis-teal/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
+                    <span className="text-[11px] sm:text-xs text-zinc-700 dark:text-zinc-300 font-medium">
                       {otpVerified ? '✓ Mobile Verified Successfully' : otpSent ? 'SMS Code Sent' : 'Verify Mobile via One-Time Password'}
                     </span>
                     {!otpSent && !otpVerified && (
                       <button
                         type="button"
                         onClick={handleSendOtp}
-                        className="px-3 py-1.5 rounded-lg bg-tis-crimson text-white text-xs font-bold hover:bg-tis-crimson-dark transition-colors"
+                        className="px-3 py-1 rounded-lg bg-tis-crimson text-white text-[11px] sm:text-xs font-bold hover:bg-tis-crimson-dark transition-colors shrink-0"
                       >
                         Send OTP
                       </button>
@@ -252,12 +253,12 @@ export default function AdmissionCTASection() {
                           placeholder="Code (1234)"
                           value={formData.otp}
                           onChange={(e) => setFormData({ ...formData, otp: e.target.value })}
-                          className="w-24 px-2 py-1 rounded-md text-xs border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900"
+                          className="w-20 px-2 py-1 rounded-md text-xs border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-900"
                         />
                         <button
                           type="button"
                           onClick={handleVerifyOtp}
-                          className="px-2.5 py-1 rounded-md bg-tis-teal text-white text-xs font-bold hover:bg-tis-teal-dark"
+                          className="px-2.5 py-1 rounded-md bg-tis-teal text-white text-xs font-bold hover:bg-tis-teal-dark shrink-0"
                         >
                           Verify
                         </button>
@@ -266,16 +267,16 @@ export default function AdmissionCTASection() {
                   </div>
 
                   {/* Grade & State */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5">
+                      <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1">
                         Admission Grade *
                       </label>
                       <select
                         required
                         value={formData.grade}
                         onChange={(e) => setFormData({ ...formData, grade: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
                       >
                         <option value="">Select Grade</option>
                         <option value="Class IV">Class IV</option>
@@ -293,14 +294,14 @@ export default function AdmissionCTASection() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1.5">
+                      <label className="block text-[11px] sm:text-xs font-bold uppercase tracking-wider text-zinc-700 dark:text-zinc-300 mb-1">
                         State / Origin *
                       </label>
                       <select
                         required
                         value={formData.state}
                         onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl border border-zinc-300 dark:border-zinc-700 bg-stone-50 dark:bg-zinc-800 text-zinc-900 dark:text-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-tis-crimson transition-all"
                       >
                         <option value="">Select State</option>
                         <option value="Uttarakhand">Uttarakhand</option>
@@ -318,16 +319,16 @@ export default function AdmissionCTASection() {
                   </div>
 
                   {/* Consent */}
-                  <div className="flex items-start gap-2 pt-2">
+                  <div className="flex items-start gap-2 pt-1">
                     <input
                       id="section-consent"
                       type="checkbox"
                       checked={formData.consent}
                       onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
                       required
-                      className="mt-1 rounded text-tis-crimson focus:ring-tis-crimson"
+                      className="mt-0.5 rounded text-tis-crimson focus:ring-tis-crimson"
                     />
-                    <label htmlFor="section-consent" className="text-xs text-zinc-600 dark:text-zinc-400">
+                    <label htmlFor="section-consent" className="text-[11px] sm:text-xs text-zinc-600 dark:text-zinc-400 leading-normal">
                       I agree to receive the prospectus, admission guidelines, and communication from Tula's International School, Dehradun.
                     </label>
                   </div>
@@ -337,7 +338,7 @@ export default function AdmissionCTASection() {
                       type="submit"
                       variant="primary"
                       size="lg"
-                      className="w-full py-3.5 shadow-xl"
+                      className="w-full py-3 sm:py-3.5 text-xs sm:text-base shadow-xl"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? 'Processing Application...' : 'Submit Admission Enquiry'}
