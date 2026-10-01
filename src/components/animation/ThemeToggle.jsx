@@ -12,7 +12,7 @@ export default function ThemeToggle({ className = '' }) {
       onClick={toggleTheme}
       type="button"
       aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      className={`relative p-2.5 rounded-full border transition-all duration-300 ${
+      className={`relative p-2 rounded-full border transition-all duration-300 shrink-0 ${
         isDark
           ? 'bg-zinc-800/90 border-zinc-700 text-amber-400 hover:bg-zinc-700 hover:border-amber-400/50 shadow-[0_0_12px_rgba(251,191,36,0.2)]'
           : 'bg-stone-100 border-stone-200 text-zinc-700 hover:bg-stone-200 hover:text-tis-crimson hover:border-tis-crimson/30 shadow-sm'

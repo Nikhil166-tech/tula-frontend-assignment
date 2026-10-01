@@ -26,11 +26,11 @@ export const stats = [
 ];
 
 export const navigationLinks = [
-  { name: "About TIS", href: "#about" },
+  { name: "About", href: "#about" },
   { name: "Academics", href: "#academics" },
-  { name: "Sports Foundation", href: "#sports" },
+  { name: "Sports", href: "#sports" },
   { name: "Boarding Life", href: "#boarding-life" },
-  { name: "Campus & Tour", href: "#campus" },
+  { name: "Campus Tour", href: "#campus" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Admissions", href: "#admissions" },
 ];
