@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Send, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
+import { Phone, Mail, MapPin, CheckCircle2, ShieldCheck, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { schoolInfo } from '../../data/tisData';
 import AnimatedReveal from '../animation/AnimatedReveal';

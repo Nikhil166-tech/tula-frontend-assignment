@@ -1,5 +1,4 @@
-import React from 'react';
-import { Phone, Mail, MapPin, ArrowUp, ExternalLink, ShieldCheck, Heart } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, ExternalLink, ShieldCheck } from 'lucide-react';
 import { schoolInfo, navigationLinks } from '../../data/tisData';
 
 export default function Footer({ onEnquireClick }) {

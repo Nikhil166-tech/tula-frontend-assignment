@@ -31,6 +31,7 @@ export const navigationLinks = [
   { name: "Sports", href: "#sports" },
   { name: "Boarding Life", href: "#boarding-life" },
   { name: "Campus Tour", href: "#campus" },
+  { name: "Fees & Aid", href: "#fee-calculator" },
   { name: "Testimonials", href: "#testimonials" },
   { name: "Admissions", href: "#admissions" },
 ];
@@ -38,59 +39,67 @@ export const navigationLinks = [
 export const sportsList = [
   {
     id: "archery",
-    title: "Archery",
+    title: "Olympic Archery",
     category: "Precision & Focus",
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=800&auto=format&fit=crop",
-    description: "Dedicated archery range with certified coaches cultivating razor-sharp mindfulness and poise."
+    image: "https://images.unsplash.com/photo-1565992441121-4367c2967103?q=80&w=800&auto=format&fit=crop",
+    description: "Dedicated Olympic standard archery range with certified coaches cultivating razor-sharp mindfulness, patience, and poise.",
+    stats: { coachRatio: "1:6", arena: "50m Outdoor Range", award: "State Gold Medalists 2025" }
   },
   {
     id: "horse-riding",
     title: "Horse Riding & Polo",
     category: "Equestrian Excellence",
     image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=800&auto=format&fit=crop",
-    description: "State-of-the-art stables and Olympic dressage rings instilling courage, rhythm, and animal companionship."
+    description: "State-of-the-art stables and dressage rings instilling courage, rhythm, posture, and deep animal companionship.",
+    stats: { coachRatio: "1:4", arena: "Championship Sand Arena", award: "Certified Dressage Circuit" }
   },
   {
     id: "swimming",
     title: "All-Weather Swimming",
     category: "Aquatics",
     image: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=800&auto=format&fit=crop",
-    description: "Semi-Olympic heated indoor swimming complex with lane timers and FINA-trained aquatic instructors."
+    description: "Semi-Olympic heated indoor swimming complex with electronic lane timers and FINA-trained aquatic instructors.",
+    stats: { coachRatio: "1:8", arena: "Semi-Olympic 25m Pool", award: "CBSE Cluster Champions" }
   },
   {
     id: "shooting",
     title: "10m Air Rifle Shooting",
     category: "Olympic Disciplines",
     image: "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?q=80&w=800&auto=format&fit=crop",
-    description: "Electronic Swiss target systems enabling students to train for national and state shooting championships."
+    description: "Electronic Swiss target systems enabling students to train rigorously for national and state shooting championships.",
+    stats: { coachRatio: "1:5", arena: "Swiss SIUS Electronic Range", award: "National Shooting Trials" }
   },
   {
     id: "karate",
     title: "Karate & Taekwondo",
     category: "Martial Arts",
     image: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=800&auto=format&fit=crop",
-    description: "Belt-grading martial arts dojo prioritizing mental fortitude, self-defense, and inner equilibrium."
+    description: "Belt-grading martial arts dojo prioritizing mental fortitude, self-defense, discipline, and inner equilibrium.",
+    stats: { coachRatio: "1:10", arena: "Padded Traditional Dojo", award: "Black Belt Certifications" }
   },
   {
     id: "lawn-tennis",
     title: "Lawn Tennis",
     category: "Racquet Sports",
     image: "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?q=80&w=800&auto=format&fit=crop",
-    description: "Floodlit synthetic hard courts with automated ball dispensers and certified ITF coaching routines."
+    description: "Floodlit synthetic hard courts with automated ball dispensers and certified ITF coaching routines.",
+    stats: { coachRatio: "1:6", arena: "3 Floodlit Decoturf Courts", award: "AITA Ranked Players" }
   },
   {
     id: "football",
-    title: "Football & Cricket Turf",
+    title: "Football & Cricket Greens",
     category: "Field Sports",
-    image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=800&auto=format&fit=crop",
-    description: "Full-sized FIFA-standard natural grass arena overlooking the verdant Shivalik mountain ranges."
+    image: "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?q=80&w=800&auto=format&fit=crop",
+    description: "Full-sized FIFA-standard natural grass arena overlooking the verdant Shivalik mountain ranges.",
+    stats: { coachRatio: "1:12", arena: "FIFA Standard Grass Pitch", award: "Subroto Cup Qualifiers" }
   },
   {
     id: "fitness",
-    title: "Strength & Cross-Training",
+    title: "Strength & Conditioning",
     category: "Athletic Conditioning",
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=800&auto=format&fit=crop",
-    description: "Biomechanically engineered gymnasium supervised by physical conditioning and sports nutrition experts."
+    description: "Biomechanically engineered gymnasium supervised by physical conditioning and sports nutrition experts.",
+    stats: { coachRatio: "1:8", arena: "4,000 sq.ft Cardio/Weights", award: "Individualized Diet Plans" }
   }
 ];
 
@@ -158,3 +167,78 @@ export const faqs = [
     answer: "Every student engages in at least two sports daily among our 16+ offerings (Archery, Horse Riding/Polo, Swimming, Karate, Shooting, Tennis, Football, Squash) alongside performing arts, robotics, and pottery."
   }
 ];
+
+export const dailyRoutine = [
+  {
+    time: "06:00 AM",
+    title: "Vedic Awakening & Morning Yogic Kriyas",
+    desc: "Gentle wake-up bugle, mindful pranayama, surya namaskar, and herbal wellness tea amidst crisp Shivalik morning mist.",
+    tag: "Mindfulness"
+  },
+  {
+    time: "07:30 AM",
+    title: "Nutritious Multi-Cuisine Breakfast",
+    desc: "Fresh organic eggs, millets, cold-pressed dairy, seasonal Himalayan fruits, and wholesome proteins.",
+    tag: "Nutrition"
+  },
+  {
+    time: "08:30 AM – 02:00 PM",
+    title: "Academic Modules & STEAM Labs",
+    desc: "Interactive CBSE lectures, hands-on physics & AI robotics experimentation, foreign languages, and digital coding.",
+    tag: "Intellect"
+  },
+  {
+    time: "03:30 PM – 05:30 PM",
+    title: "Compulsory Olympic Sports & Conditioning",
+    desc: "Two hours of intensive training under NIS-certified coaches across equestrian, archery, swimming, turf, or shooting.",
+    tag: "Athletics"
+  },
+  {
+    time: "06:00 PM – 07:30 PM",
+    title: "Evening Prep & Mentor Remedials",
+    desc: "Quiet study hour in hostel lounges with subject masters on-site for one-on-one doubt resolution and pre-board mentoring.",
+    tag: "Mentorship"
+  },
+  {
+    time: "08:00 PM – 09:30 PM",
+    title: "Communal Dinner & House Bonding",
+    desc: "Warm communal dinner with house masters, debate forums, music jams, chess leagues, and calls with family.",
+    tag: "Camaraderie"
+  }
+];
+
+export const feeTiers = {
+  primary: {
+    grade: "Classes IV - V",
+    tuition: "₹ 4,80,000",
+    boarding: "₹ 2,40,000",
+    totalAnnual: "₹ 7,20,000",
+    scholarshipAvailable: "Up to 30% for Academic / Sports Merit",
+    inclusions: ["Tuition & Boarding", "5 Meals Daily", "Uniform Kit", "All 16+ Sports Coaching", "Medical Infirmary & Laundry"]
+  },
+  middle: {
+    grade: "Classes VI - VIII",
+    tuition: "₹ 5,40,000",
+    boarding: "₹ 2,60,000",
+    totalAnnual: "₹ 8,00,000",
+    scholarshipAvailable: "Up to 40% for State / National Talent",
+    inclusions: ["Tuition & Boarding", "STEAM & Robotics Lab", "Foreign Languages", "Inter-School Travel", "Pastoral Mentoring"]
+  },
+  secondary: {
+    grade: "Classes IX - X",
+    tuition: "₹ 6,10,000",
+    boarding: "₹ 2,80,000",
+    totalAnnual: "₹ 8,90,000",
+    scholarshipAvailable: "Up to 50% for 90%+ CBSE Merit / National Athletes",
+    inclusions: ["Board Exam Prep", "Career Guidance", "Equestrian & Archery", "Digital Research Access", "24/7 Security"]
+  },
+  senior: {
+    grade: "Classes XI - XII",
+    tuition: "₹ 6,80,000",
+    boarding: "₹ 3,10,000",
+    totalAnnual: "₹ 9,90,000",
+    scholarshipAvailable: "Up to 60% for Exceptional Talent & Olympiad Ranks",
+    inclusions: ["JEE/NEET/SAT Prep Cell", "Portfolio Curation", "Global University Guidance", "Leadership Prefectship", "All-Weather Amenities"]
+  }
+};
+

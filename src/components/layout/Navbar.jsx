@@ -21,21 +21,21 @@ export default function Navbar({ onEnquireClick }) {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'glass-nav border-b border-zinc-200/80 dark:border-zinc-800/80 shadow-sm py-2'
-          : 'bg-white/95 dark:bg-[#0B0D11]/95 py-3 sm:py-4'
+          ? 'glass-nav border-b border-zinc-200/80 dark:border-zinc-800/80 shadow-md py-2.5'
+          : 'bg-white/95 dark:bg-[#080A0F]/95 border-b border-zinc-100 dark:border-zinc-800/60 py-3 sm:py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 flex items-center justify-between gap-2">
         {/* Brand / Logo */}
-        <a href="#" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-tis-crimson to-tis-crimson-dark flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
-            <span className="font-display font-black text-sm sm:text-lg text-tis-gold tracking-tighter">TIS</span>
+        <a href="#" className="flex items-center gap-2 sm:gap-3 group shrink-0 min-w-0">
+          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-br from-tis-crimson via-tis-crimson to-tis-crimson-dark flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <span className="font-display font-black text-xs sm:text-base text-tis-gold tracking-tight">TIS</span>
           </div>
-          <div className="flex flex-col">
-            <span className="font-display font-extrabold text-base sm:text-xl tracking-tight text-zinc-900 dark:text-white leading-tight">
+          <div className="flex flex-col min-w-0">
+            <span className="font-display font-black text-sm sm:text-lg md:text-xl tracking-tight text-zinc-950 dark:text-white leading-tight truncate">
               Tula's <span className="text-tis-crimson dark:text-red-400">International</span>
             </span>
-            <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-tis-gold dark:text-tis-gold-light truncate">
+            <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wider text-tis-gold-dark dark:text-tis-gold-light truncate">
               The Modern Gurukul • Dehradun
             </span>
           </div>
@@ -43,12 +43,12 @@ export default function Navbar({ onEnquireClick }) {
 
         {/* Desktop Group (Links + Divider + CTAs) - Visible ONLY on lg screens (>= 1024px) */}
         <div className="hidden lg:flex items-center">
-          <nav className="flex items-center gap-4 xl:gap-6 mr-6">
+          <nav className="flex items-center gap-3.5 xl:gap-5 mr-5">
             {navigationLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs xl:text-sm font-semibold text-zinc-700 dark:text-zinc-300 hover:text-tis-crimson dark:hover:text-red-400 transition-colors relative py-1 px-1 group"
+                className="text-xs xl:text-sm font-bold text-zinc-700 dark:text-zinc-300 hover:text-tis-crimson dark:hover:text-red-400 transition-colors relative py-1 px-1 group whitespace-nowrap"
               >
                 {link.name}
                 <span className="absolute bottom-0 left-1 right-1 h-0.5 bg-tis-crimson dark:bg-tis-gold opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -57,17 +57,17 @@ export default function Navbar({ onEnquireClick }) {
           </nav>
 
           {/* Visual Vertical Divider */}
-          <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800 mr-5" />
+          <div className="h-6 w-px bg-zinc-200 dark:bg-zinc-800 mr-4" />
 
           {/* Desktop Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <ThemeToggle />
 
             <Button
               variant="outline"
               size="sm"
               onClick={onEnquireClick}
-              className="border-tis-teal text-tis-teal hover:bg-tis-teal hover:text-white text-xs px-3.5 py-1.5"
+              className="border-tis-teal text-tis-teal hover:bg-tis-teal hover:text-white text-xs px-3.5 py-1.5 font-bold"
             >
               Enquire
             </Button>
@@ -77,7 +77,7 @@ export default function Navbar({ onEnquireClick }) {
               size="sm"
               href="#admissions"
               icon={ArrowUpRight}
-              className="text-xs px-4 py-1.5"
+              className="text-xs px-4 py-1.5 shadow-sm"
             >
               Apply 2026
             </Button>
@@ -85,14 +85,15 @@ export default function Navbar({ onEnquireClick }) {
         </div>
 
         {/* Mobile / Tablet Controls - Visible ONLY on < lg screens (< 1024px) */}
-        <div className="flex lg:hidden items-center gap-2 sm:gap-3">
+        <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
           <ThemeToggle />
+
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-xl text-zinc-700 dark:text-zinc-200 hover:bg-stone-100 dark:hover:bg-zinc-800 focus:outline-none"
+            className="p-2 rounded-xl text-zinc-700 dark:text-zinc-200 hover:bg-stone-100 dark:hover:bg-zinc-800 border border-zinc-200/80 dark:border-zinc-800 focus:outline-none transition-colors"
             aria-label="Toggle Navigation Menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-tis-crimson" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -113,7 +114,7 @@ export default function Navbar({ onEnquireClick }) {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 hover:text-tis-crimson py-2.5 px-2 rounded-lg hover:bg-stone-50 dark:hover:bg-zinc-800/60 border-b border-zinc-100 dark:border-zinc-800/60 flex items-center justify-between transition-colors"
+                  className="text-sm font-bold text-zinc-800 dark:text-zinc-200 hover:text-tis-crimson py-2.5 px-2 rounded-lg hover:bg-stone-50 dark:hover:bg-zinc-800/60 border-b border-zinc-100 dark:border-zinc-800/60 flex items-center justify-between transition-colors"
                 >
                   <span>{link.name}</span>
                   <span className="text-zinc-400 text-xs font-bold">›</span>
@@ -126,24 +127,24 @@ export default function Navbar({ onEnquireClick }) {
                     setMobileMenuOpen(false);
                     onEnquireClick();
                   }}
-                  className="w-full justify-center text-sm py-2.5"
+                  className="w-full justify-center text-sm py-2.5 shadow-glow-crimson"
                 >
                   Enquire for Admission
                 </Button>
                 <Button
                   variant="outline"
-                  href="#admissions"
+                  href="#fee-calculator"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full justify-center text-sm py-2.5"
+                  className="w-full justify-center text-sm py-2.5 border-tis-teal text-tis-teal"
                 >
-                  Admissions Prospectus & Forms
+                  Fee & Scholarship Estimator
                 </Button>
                 <a
                   href={`tel:${schoolInfo.admissionsHelpline}`}
-                  className="mt-1 text-center text-xs font-bold text-zinc-600 dark:text-zinc-400 flex items-center justify-center gap-2 py-2 rounded-xl bg-stone-100 dark:bg-zinc-800"
+                  className="mt-1 text-center text-xs font-bold text-zinc-700 dark:text-zinc-300 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-stone-100 dark:bg-zinc-800"
                 >
                   <PhoneCall className="w-3.5 h-3.5 text-tis-crimson" />
-                  <span>Admissions Helpline: {schoolInfo.admissionsHelpline}</span>
+                  <span>Helpline: {schoolInfo.admissionsHelpline}</span>
                 </a>
               </div>
             </div>

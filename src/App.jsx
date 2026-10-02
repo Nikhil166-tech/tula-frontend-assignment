@@ -12,6 +12,7 @@ import SportsSection from './components/sections/SportsSection';
 import AcademicsSection from './components/sections/AcademicsSection';
 import CampusLifeSection from './components/sections/CampusLifeSection';
 import VirtualTourSection from './components/sections/VirtualTourSection';
+import FeeCalculatorSection from './components/sections/FeeCalculatorSection';
 import TestimonialsSection from './components/sections/TestimonialsSection';
 import FAQSection from './components/sections/FAQSection';
 import AdmissionCTASection from './components/sections/AdmissionCTASection';
@@ -30,7 +31,7 @@ export default function App() {
       {/* 2. Standout Feature: Interactive Custom Mouse Cursor (disabled automatically on touch/mobile) */}
       <CustomCursor />
 
-      <div className="min-h-screen flex flex-col bg-white dark:bg-[#0B0D11] text-zinc-900 dark:text-zinc-100 transition-colors duration-300 overflow-x-hidden pb-14 md:pb-0">
+      <div className="min-h-screen flex flex-col bg-white dark:bg-[#080A0F] text-zinc-900 dark:text-zinc-100 transition-colors duration-300 overflow-x-hidden pb-14 md:pb-0">
         {/* Top Contact Bar */}
         <QuickContactBar onEnquireClick={() => setEnquiryModalOpen(true)} />
 
@@ -60,6 +61,9 @@ export default function App() {
           {/* 22-Acre Campus & Virtual Tour Explorer */}
           <VirtualTourSection onEnquireClick={() => setEnquiryModalOpen(true)} />
 
+          {/* Standout Feature: Interactive Fee & Scholarship Estimator */}
+          <FeeCalculatorSection onEnquireClick={() => setEnquiryModalOpen(true)} />
+
           {/* Verified Community Testimonials */}
           <TestimonialsSection />
 
@@ -73,14 +77,18 @@ export default function App() {
         {/* Institutional Footer */}
         <Footer onEnquireClick={() => setEnquiryModalOpen(true)} />
 
-        {/* Floating WhatsApp Action Button */}
-        <div className="fixed bottom-20 md:bottom-6 right-4 sm:right-6 z-40">
+        {/* Floating WhatsApp Action Button with modern tooltip */}
+        <div className="fixed bottom-20 md:bottom-8 right-4 sm:right-8 z-40 flex items-center gap-3">
+          <div className="hidden sm:flex items-center px-3.5 py-1.5 rounded-full bg-white/95 dark:bg-zinc-900/95 backdrop-blur-md shadow-xl border border-zinc-200/80 dark:border-zinc-800 text-xs font-bold text-zinc-800 dark:text-zinc-200 pointer-events-none">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse" />
+            Admissions Chat Online
+          </div>
           <a
             href="https://api.whatsapp.com/send?phone=919837983791&text=Hello%20Tula's%20International%20School,%20I%20would%20like%20to%20enquire%20about%20admissions."
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat on WhatsApp"
-            className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-transform"
+            className="w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:scale-110 active:scale-95 transition-all group"
           >
             <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
           </a>
