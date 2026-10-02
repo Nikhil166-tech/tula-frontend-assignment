@@ -8,7 +8,7 @@ This project elevates the digital presence of TIS while strictly retaining its c
 
 ## 🚀 Live Demo & Repository
 * **Live Deployment:** [https://netpuppys.vercel.app](https://netpuppys.vercel.app)
-* **Repository:** Public GitHub Repository
+* **Repository:** [https://github.com/Nikhil166-tech/tula-frontend-assignment](https://github.com/Nikhil166-tech/tula-frontend-assignment)
 
 ---
 
