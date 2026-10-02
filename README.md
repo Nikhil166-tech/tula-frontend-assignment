@@ -7,7 +7,7 @@ This project elevates the digital presence of TIS while strictly retaining its c
 ---
 
 ## 🚀 Live Demo & Repository
-* **Live Deployment:** [Deploy on Vercel / Netlify / GitHub Pages](https://github.com/) *(Configured and production-ready)*
+* **Live Deployment:** [https://netpuppys.vercel.app](https://netpuppys.vercel.app)
 * **Repository:** Public GitHub Repository
 
 ---
